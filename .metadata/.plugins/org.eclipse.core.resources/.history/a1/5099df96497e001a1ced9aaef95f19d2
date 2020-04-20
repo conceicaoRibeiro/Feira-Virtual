@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Feira Virtual Senac</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <link rel="icon" href="/image/logosenac.png" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/webjars/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet"/>
+  
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-inverse navbar navbar-dark  fixed-top" id="navbar-inicio">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="btn navbar-toggle pull-left">
+						<i class="oi oi-menu" id="btn"></i>
+					</button>
+					<a class="navbar-brand " href="#">Feira Virtual Senac</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="layout-main">
+	
+	    <aside>
+	        <nav class="sidebar  sidebar-open">
+	            <ul class="nav nav-pills">
+	                <li class="nav-item"><a class="nav-link " href="/"> <i
+	                        class="oi oi-home"></i> <span>Home</span>
+	                </a></li>
+	            </ul>
+	
+	            <ul class="nav nav-pills">
+	                <li class="nav-item"><span class="nav-link active">Cadastro e Vagas</span></li>
+	                <li class="nav-item"><a class="nav-link"
+	                                        href="/usuarios/cadastrar"> <i class="oi oi-plus"></i>
+	                    <span>Cadastro do Usuário</span>
+	                </a></li>
+	            </ul>
+	        </nav>
+	    </aside>
+	
+	    <section class="layout-content">
+	        <div class="page-header">
+	            <nav class="navbar navbar-expand-md navbar-top bg-light">
+	                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+	                    <ul class="navbar-nav">
+	                        <li class="nav-item active">
+	                            <i class="oi oi-caret-right"></i>
+	                            <span>Cadastro do Usuário</span>
+	                        </li>
+	                    </ul>
+	                </div>
+	                <a class="btn btn-primary btn-md" href="/usuarios/listar" role="button">
+	                    <span class="oi oi-spreadsheet" title="Cadastro" aria-hidden="true"></span>
+	              <span class="oi oi-eye"></span>      <span>Visualização do perfil </span>
+	                </a>
+	            </nav>
+	        </div>
+	
+	        <div class="container" id="cadastro">
+	            <form action="/funcionarios/salvar" method="POST">
+	                <div class="form-row">
+	                    <div class="form-group col-md-6">
+	                        <label for="nome">Nome completo</label>
+	                        <input type="text" class="form-control" id="nome" placeholder="Paulina Bracho"
+	                               autofocus="autofocus" name="nome" value=""/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                   <div class="form-group col-md-6">
+	                        <label for="dataEntrada">Data de Entrada</label>
+	                        <input type="date" class="form-control" id="dataEntrada" name="dataEntrada" value=""/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                </div>
+	                
+	                <div class="form-row">
+	                
+						<div class="form-group col-md-6">
+	                        <label for="nome">Informe o CPF</label>
+	                        <input type="text" class="form-control" id="nome" placeholder="6666678980"
+	                               autofocus="autofocus" name="cpf" value=""/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="form-row">
+	                 <div class="form-group col-md-6">
+	                        <label for="cargo">Paticipa de algum curso no Senac?</label>
+	                        <select id="cargo" class="form-control" name="cargo">
+	                            <option value="">Selecione...</option>
+	                            <option value="1">Sim</option>
+	                            <option value="2">Não</option>
+	                        </select>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="form-row">
+	                    <div class="form-group col-md-6">
+	                        <label for="cidade">Cidade</label>
+	                        <input type="text" class="form-control" id="cidade" name="endereco.cidade" value=""/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                    <div class="form-group col-md-6">
+	                        <label for="logradouro">Logradouro</label>
+	                        <input type="text" class="form-control" id="logradouro" placeholder="logradouro sem número"
+	                               name="endereco.logradouro" value=""/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="form-row">
+	                    <div class="form-group col-md-6">
+	                        <label for="numero">Número</label>
+	                        <input type="text" class="form-control" id="numero" name="endereco.numero" value=""/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                    <div class="form-group col-md-6">
+	                        <label for="complemento">Complemento</label>
+	                        <input type="text" class="form-control" id="complemento" placeholder="fundos, casa, AP. 102, .."
+	                               name="endereco.complemento" value=""/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="form-row">
+	                    <div class="form-group col-md-6">
+	                        <label for="bairro">Bairro</label>
+	                        <input type="text" class="form-control" id="bairro" name="endereco.bairro" value=""/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                    <div class="form-group col-md-4">
+	                        <label for="uf">UF</label>
+	                        <select id="uf" class="form-control" name="endereco.uf">
+	                            <option value="">Selecione...</option>
+	                            <option value="AC">AC</option>
+	                            <option value="AL">AL</option>
+	                            <option value="AM">AM</option>
+	                            <option value="BA">BA</option>
+	                            <option value="CE">CE</option>
+	                            <option value="DF">DF</option>
+	                            <option value="ES">ES</option>
+	                            <option value="GO">GO</option>
+	                            <option value="MA">MA</option>
+	                            <option value="MT">MT</option>
+	                            <option value="MS">MS</option>
+	                            <option value="MG">MG</option>
+	                            <option value="PA">PA</option>
+	                            <option value="PB">PB</option>
+	                            <option value="PR">PR</option>
+	                            <option value="PE">PE</option>
+	                            <option value="PI">PI</option>
+	                            <option value="RJ">RJ</option>
+	                            <option value="RN">RN</option>
+	                            <option value="RS">RS</option>
+	                            <option value="RO">RO</option>
+	                            <option value="RR">RR</option>
+	                            <option value="SC">SC</option>
+	                            <option value="SP">SP</option>
+	                            <option value="SE">SE</option>
+	                            <option value="TO">TO</option>
+	                        </select>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                    <div class="form-group col-md-2">
+	                        <label for="cep">Cep</label>
+	                        <input type="text" class="form-control" id="cep" data-mask="00000-000" name="endereco.cep"
+	                               value=""/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                </div>
+	                    <td colspan="2">
+	                            <a class="btn btn-info btn-sm" href="/funcionarios/editar/4" role="button">
+	                                <span class="oi oi-brush" title="Editar" aria-hidden="true"></span>
+	                            </a>
+	                            <button id="btn_funcionarios/excluir/4" type="button" class="btn btn-danger btn-sm"
+	                                    data-toggle="modal" data-target="#myModal">
+	                                <span class="oi oi-circle-x" title="Excluir" aria-hidden="true"></span>
+	                            </button>
+	                        </td>
+	                        <button id="btn_funcionarios/excluir/4" type="button" class="btn btn-danger btn-sm"
+	                                    data-toggle="modal" data-target="#myModal">
+	                                <span class="oi oi-circle-x" title="Excluir" aria-hidden="true"></span>
+	                            </button>
+	            </form>
+	        </div>
+	    </section>
+	
+	</div>
+	
+    <footer class="layout-footer">
+        <div class="container">
+           <span class="footer-copy">&copy; 2020 Feira Virtual Senac Todos os direitos reservados.</span>
+        </div>
+    </footer>	
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+    
+	$(document).ready(function(){
+	    $(".navbar-toggle").click(function(){
+	        $(".sidebar").toggleClass("sidebar-open");
+	    })
+	});
+
+</script>
+</body>
+</html>		

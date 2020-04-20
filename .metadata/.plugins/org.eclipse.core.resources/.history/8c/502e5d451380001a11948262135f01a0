@@ -1,0 +1,6 @@
+package br.com.senac.feiravirtual.domain;
+import javax.persistence.*;
+
+public abstract class AbstractEntity <ID extends Serializable> implements Serializable{
+
+}

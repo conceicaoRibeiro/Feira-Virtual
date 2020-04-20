@@ -1,0 +1,18 @@
+package br.com.senac.feiravirtual;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class FeiraVirtualSenacApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(FeiraVirtualSenacApplication.class, args);
+	}
+	
+	 @Bean  
+	   public LocaleResolver localeResolver(){  
+	      return new FixedLocaleResolver(new Locale("pt", "BR"));  
+	   }
+
+}
