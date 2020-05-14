@@ -1,5 +1,0 @@
-package br.com.senac.feiravirtual.dao;
-
-public class AbstractDao {
-
-}

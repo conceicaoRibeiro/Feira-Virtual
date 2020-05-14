@@ -1,8 +1,0 @@
-package br.com.senac.feiravirtual.web.controller.conversor;
-
-public class Snippet {
-	public static void main(String[] args) {
-		StringToInteger.java
-	}
-}
-

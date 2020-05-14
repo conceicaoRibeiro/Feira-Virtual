@@ -1,5 +1,0 @@
-package br.com.senac.feiravirtual.web.controller.conversor;
-
-public class StringToUsuarioConverter {
-
-}
